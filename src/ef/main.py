@@ -572,7 +572,15 @@ def main():
     """主函数"""
     parser = argparse.ArgumentParser(
         description="文件列表展开工具（支持 -f/-F 递归解析，-f/-F 可以重复出现多次，"
-                     "按命令行顺序依次展开并拼接成一份结果）"
+                     "按命令行顺序依次展开并拼接成一份结果）",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "在 ef 仓库目录运行（建议 Python 3.12）：\n"
+            "  uv run --with-editable . ef --help\n"
+            "  uv run --with-editable . ef -F filelist.f -o expanded.f\n"
+            "  uv run --with-editable . ef -f filelist.f -vv\n"
+            "filelist.f 替换为实际输入；-F 相对列表所在目录展开路径。"
+        ),
     )
     parser.add_argument('-f', metavar='FILE', dest='file_specs', action=_CollectFileSpecAction,
                          help='直接解析，编译选项保持原样；可重复指定')
