@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -31,8 +31,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/ef"
-Documentation = "https://github.com/yourusername/ef/README.md"
+Homepage = "https://github.com/MaNan93/ef"
+Documentation = "https://github.com/MaNan93/ef/blob/main/README.md"
 
 [project.scripts]
 ef = "ef.main:main"

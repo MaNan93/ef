@@ -18,24 +18,18 @@ Verilog/SystemVerilog file list expander with recursive parsing support.
 
 ## Installation
 
-### Using pip (recommended)
+### From source with uv
+
+Run from the repository root. `.python-version` selects Python 3.12;
+uv installs the project and uses `uv.lock` automatically:
 
 ```bash
-pip install -e .
+uv run ef --help
+uv run ef -F filelist.f -o expanded.f
 ```
 
-Or for normal installation:
-
-```bash
-pip install .
-```
-
-### From source
-
-```bash
-cd ef
-python -m pip install -e .
-```
+Use `uv sync --locked` to prepare the environment ahead of time.
+For installation without uv, `pip install .` remains available.
 
 ## Usage
 
